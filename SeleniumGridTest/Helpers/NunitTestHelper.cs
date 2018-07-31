@@ -23,6 +23,12 @@ namespace SeleniumGridTest
             return TestContext.CurrentContext.Test.Properties.Get(attr).ToString();
         }
 
+        public static String GetClassName()
+        {
+
+            return TestContext.CurrentContext.Test.ClassName.Substring(23);
+        }
+
 
         public static TestContext GetTestContext()
         {

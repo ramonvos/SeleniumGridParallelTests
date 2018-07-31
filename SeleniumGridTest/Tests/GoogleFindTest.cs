@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using AventStack.ExtentReports;
+using NUnit.Framework;
 using SeleniumGridTest.AdvancedReport;
 using SeleniumGridTest.Base;
 using SeleniumGridTest.Page;
@@ -13,8 +14,8 @@ namespace SeleniumGridTest.Tests
 {
     [TestFixture]
     public class GoogleFindTest : BaseTest
-    {   
-
+    {
+        
         [Test,Description("Desc"), Category("Critical")]
         public void FindGooglePageSuccess1()
         {   
@@ -36,7 +37,7 @@ namespace SeleniumGridTest.Tests
 
         }
 
-        [Test, Description("Desc"), Category("Smoke test")]
+        [Test, Description("Desc"), Category("Smoke Test")]
         public void FindGooglePageFail1()
         {
             
@@ -56,8 +57,36 @@ namespace SeleniumGridTest.Tests
 
         }
 
+        [Test, Description("Optional Description"), Category("Smoke Test")]
+        public void FindGooglePageIntentionalEx()
+        {
 
-        [Test, Description("Desc"), Category("Exploratory")]
+
+            string text = "Selenium lesson page";
+            GooglePage page = new GooglePage();
+
+            page.OpenGooglePage().FindGoogle(text);
+            Reporter.TestInfo();
+
+            
+            try
+            {
+                Assert.That(BaseTest.driver.PageSource.Contains("Free Selium Tutorials - Guru99"), Is.EqualTo(true), "Erro ao validar o label");
+            }
+            catch (Exception ex)
+            {
+                Reporter.exceptionLog(ex);
+                
+            }
+            
+
+
+
+
+        }
+
+
+        [Test, Description("Optional Description"), Category("Exploratory")]
         public void FindGooglePageSuccess2()
         {
             
@@ -72,7 +101,7 @@ namespace SeleniumGridTest.Tests
             
 
         }
-        [Test, Description("Desc"), Category("Exploratory")]
+        [Test, Description("Optional Description"), Category("Exploratory")]
         public void FindGooglePageSuccess3()
         {
 
@@ -86,7 +115,7 @@ namespace SeleniumGridTest.Tests
 
         }
 
-        [Test, Description("Desc"), Category("Exploratory")]
+        [Test, Description("Optional Description"), Category("Exploratory")]
         public void FindGooglePageSuccess4()
         {
 
@@ -100,7 +129,7 @@ namespace SeleniumGridTest.Tests
 
         }
 
-        [Test, Description("Desc"), Category("Exploratory")]
+        [Test, Description("Optional Description"), Category("Exploratory")]
         public void FindGooglePageSuccess5()
         {
             
@@ -115,7 +144,7 @@ namespace SeleniumGridTest.Tests
 
         }
 
-        [Test, Description("Desc"), Category("Exploratory")]
+        [Test, Description("Optional Description"), Category("Exploratory")]
         public void FindGooglePageSuccess6()
         {
 

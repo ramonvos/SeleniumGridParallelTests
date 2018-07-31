@@ -7,6 +7,7 @@ using OpenQA.Selenium.Remote;
 using SeleniumGridTest.AdvancedReport;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,37 +17,42 @@ namespace SeleniumGridTest.Base
     public class BaseTest
     {
         public static IWebDriver driver;
-       //public static RemoteWebDriver driver { get; set; }
+
+        //public static RemoteWebDriver driver { get; set; }
 
         public static string BASE_URL = "https://www.google.com.br";
 
         [OneTimeSetUp]
         public void SetUpTest() 
         {
-            //ChromeOptions options = new ChromeOptions();
-            //options.AddArguments("--headless");
-       
-            //DesiredCapabilities capability = DesiredCapabilities.Chrome();
-            //capability.SetCapability("platform", "WIN10");
-            //capability.SetCapability("browserName", "chrome");
-            //capability.SetCapability("platformName", "WIN10");
-            //capability.SetCapability("maxInstances", "5");
-            ////capability.SetCapability(ChromeOptions.Capability, "--headless");
-            ////capability.SetCapability("version", "latest");
-            //////capability.SetCapability("gridlasticUser", USERNAME);
-            //////capability.SetCapability("gridlasticKey", ACCESS_KEY);
-            ////capability.SetCapability("video", "True");
-            //driver = new RemoteWebDriver(
-            //  new Uri("http://192.168.0.104:11661/wd/hub"), capability, TimeSpan.FromSeconds(600));
+            //if (ConfigurationManager.AppSettings["environment"] == "production")
+            //{
+
+
+
+                //ChromeOptions options = new ChromeOptions();
+                //options.AddArguments("--headless");
+
+                //DesiredCapabilities capability = DesiredCapabilities.Chrome();
+                //capability.SetCapability("platform", "WIN10");
+                //capability.SetCapability("browserName", "chrome");
+                //capability.SetCapability("platformName", "WIN10");
+                //capability.SetCapability("maxInstances", "5");
+                ////capability.SetCapability(ChromeOptions.Capability, "--headless");
+                ////capability.SetCapability("version", "latest");
+                //////capability.SetCapability("gridlasticUser", USERNAME);
+                //////capability.SetCapability("gridlasticKey", ACCESS_KEY);
+                ////capability.SetCapability("video", "True");
+                //driver = new RemoteWebDriver(
+                //  new Uri("http://192.168.0.104:11661/wd/hub"), capability, TimeSpan.FromSeconds(600));
 
 
 
 
-            //driver = new RemoteWebDriver(new Uri("http://192.168.0.104:4444/wd/hub"), options);
+                //driver = new RemoteWebDriver(new Uri("http://192.168.0.104:4444/wd/hub"), options);
 
-
-            driver = new ChromeDriver(chromeOptions());
-            //AdvancedReport.Reporter.CreateManagerReport();
+          driver = new ChromeDriver(chromeOptions()); 
+            
             AdvancedReport.Reporter.CreateReport();
 
         }

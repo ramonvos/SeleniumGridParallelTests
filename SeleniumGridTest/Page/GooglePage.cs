@@ -12,9 +12,6 @@ namespace SeleniumGridTest.Page
 {
     public class GooglePage 
     {
-
-        
-
         IWebElement txtFind => BaseTest.driver.FindElement(By.Name("q"));
         IWebElement btnFind => BaseTest.driver.FindElement(By.Name("q"));
 
@@ -29,9 +26,6 @@ namespace SeleniumGridTest.Page
         {
             txtFind.SendKeys(text);
             btnFind.Submit();
-
-            
-
             
             return new GooglePage();
         }

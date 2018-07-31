@@ -117,7 +117,6 @@
     <Compile Include="Tests\GoogleFindTest.cs" />
     <Compile Include="Helpers\ExtensionMethods.cs" />
     <Compile Include="Helpers\TextBoxHelper.cs" />
-    <Compile Include="Helpers\TextBoxType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

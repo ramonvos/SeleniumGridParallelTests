@@ -15,13 +15,14 @@ namespace SeleniumGridTest.AdvancedReport
         public static ExtentTest test;
         public static KlovReporter klov;
 
-        public static string pathToReport = @"C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\extent.html";
+        public static string pathToReport = @"C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\";
+        public static string reportName = "RelatorioDeTestes - ";
         private static string path = NunitTestHelper.GetPathToProject();
 
 
         public static void CreateReport()
         {
-            var htmlReporter = new ExtentHtmlReporter(pathToReport);
+            var htmlReporter = new ExtentHtmlReporter(pathToReport + reportName + DateTime.Now.ToString("dd-MM-yyyy")+ ".html");
             var environment = ConfigurationManager.AppSettings["environment"];
 
             // create ExtentReports and attach reporter(s)
@@ -56,13 +57,21 @@ namespace SeleniumGridTest.AdvancedReport
         {
             var testName = NunitTestHelper.GetTestName();
             var description = NunitTestHelper.GetTestAttribute("Description");
+            var className = NunitTestHelper.GetClassName();
+            var category = NunitTestHelper.GetTestAttribute("Category");
             // creates a toggle for the given test, adds all log events under it    
-            test = extent.CreateTest(testName, description);
+            test = extent.CreateTest(testName, description).AssignCategory(category);
         }
 
         public static void Log(Status logstatus, string stacktrace)
         {
             test.Log(logstatus, "Test ended with " + logstatus + stacktrace);
+
+        }
+
+        public static void exceptionLog(Exception ex)
+        {
+            test.Fail(ex);
 
         }
 

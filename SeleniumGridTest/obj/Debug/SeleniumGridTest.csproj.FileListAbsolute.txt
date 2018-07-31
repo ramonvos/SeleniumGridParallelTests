@@ -40,3 +40,4 @@ C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\obj\Debug\Selenium
 C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\obj\Debug\SeleniumGridTest.csproj.CopyComplete
 C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\obj\Debug\SeleniumGridTest.dll
 C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\obj\Debug\SeleniumGridTest.pdb
+C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\obj\Debug\SeleniumGridTest.csprojResolveAssemblyReference.cache
