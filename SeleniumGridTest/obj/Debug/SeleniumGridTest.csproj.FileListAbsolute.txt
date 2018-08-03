@@ -6,6 +6,7 @@ C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\Mono.Cec
 C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\SeleniumGridTest.dll.config
 C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\SeleniumGridTest.dll
 C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\SeleniumGridTest.pdb
+C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\DnsClient.dll
 C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\ExtentReports.dll
 C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\HtmlAgilityPack.dll
 C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\MongoDB.Bson.dll
@@ -14,6 +15,7 @@ C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\MongoDB.
 C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\Newtonsoft.Json.dll
 C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\nunit.framework.dll
 C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\RazorEngine.dll
+C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\System.Buffers.dll
 C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\System.Configuration.ConfigurationManager.dll
 C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
 C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\System.Security.AccessControl.dll
@@ -22,6 +24,7 @@ C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\System.S
 C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\System.Web.Razor.dll
 C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\WebDriver.dll
 C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\WebDriver.Support.dll
+C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\DnsClient.xml
 C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\HtmlAgilityPack.xml
 C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\MongoDB.Bson.xml

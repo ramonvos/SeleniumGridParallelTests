@@ -31,8 +31,7 @@
         <ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
             <li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
                 <li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
-                            <li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
-            <li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+                        <li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
         </ul>
 
         <!-- report name -->
@@ -45,7 +44,7 @@
         <ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 
             <a>
-                <span class='suite-start-time label blue darken-3'>31/07/2018 00:51:31 Hora oficial do Brasil</span>
+                <span class='suite-start-time label blue darken-3'>31/07/2018 22:25:42 Hora oficial do Brasil</span>
             </a>
             <a>
                 <span class="label blue darken-3">3.1.0</span>
@@ -85,9 +84,7 @@
                         <i class='material-icons'>local_offer</i> Category
                     </a>
                     <ul id='category-toggle' class='dropdown-content'>
-                            <li><a href='#'>SmokeTest</a></li>
                             <li><a href='#'>Critical</a></li>
-                            <li><a href='#'>Exploratory</a></li>
                         <li class='divider'></li>
                         <li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
                     </ul>
@@ -137,10 +134,10 @@
                     <canvas id='parent-analysis' width='100' height='80'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span><span class='strong'>7</span> test(s) passed</span>
+                    <span><span class='strong'>1</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong'>2</span> test(s) failed, <span class='strong'>0</span> others
+                    <span class='strong'>0</span> test(s) failed, <span class='strong'>1</span> others
                 </div>
             </div>
         </div>
@@ -152,10 +149,10 @@
                         <canvas id='child-analysis' width='100' height='80'></canvas>
                     </div>
                     <div class='block text-small'>
-                        <span><span class='strong'>12</span> step(s) passed</span>
+                        <span><span class='strong'>2</span> step(s) passed</span>
                     </div>
                     <div class='block text-small'>
-                        <span class='strong'>4</span> step(s) failed, <span class='strong'>7</span> others
+                        <span class='strong'>0</span> step(s) failed, <span class='strong'>3</span> others
                     </div>
                 </div>
             </div>
@@ -170,117 +167,16 @@
             <ul id='test-collection' class='test-collection'>
 
 
-                    <li class='test displayed active  fail' status='fail' test-id='1'>
-                        <div class='test-heading'>
-                            <span class='test-name'>FindGooglePageFail1</span>
-                            <span class='test-time'>31/07/2018 00:51:31</span>
-                            <span class='test-status right fail'>Fail</span>
-                        </div>
-                        <div class='test-content hide'>
-                                <div class='test-time-info'>
-                                    <span class='label start-time'>31/07/2018 00:51:31</span>
-                                    <span class='label end-time'>31/07/2018 00:51:38</span>
-                                    <span class='label time-taken grey lighten-1 white-text'>00:00:06.2701890</span>
-                                </div>
-                                    <div class='test-desc'>Desc</div>
-                                    <div class='test-attributes'>
-                                            <div class='category-list'>
-                                                    <span class='category label white-text'>SmokeTest</span>
-                                            </div>
-                                                                            </div>
-                                    <div class='test-steps'>
-                                        <table class='bordered table-results'>
-                                            <thead>
-                                                <tr>
-                                                    <th>Status</th>
-                                                    <th>Timestamp</th>
-                                                    <th>Details</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:37</td>
-                                                        <td class='step-details'>Step test  2346a41e-b29a-499b-90fd-bad42a6e8fb6</td>
-                                                    </tr>
-                                                    <tr class='log' status='fail'>
-                                                        <td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:37</td>
-                                                        <td class='step-details'>ERRO! Teste falhou</td>
-                                                    </tr>
-                                                    <tr class='log' status='fail'>
-                                                        <td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:38</td>
-                                                        <td class='step-details'>Test ended with FailTest ended with Fail   em SeleniumGridTest.Tests.GoogleFindTest.FindGooglePageFail1() na C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\Tests\GoogleFindTest.cs:linha 53</td>
-                                                    </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-                        </div>
-                    </li>
-                    <li class='test displayed active  fail' status='fail' test-id='2'>
-                        <div class='test-heading'>
-                            <span class='test-name'>FindGooglePageIntentionalEx</span>
-                            <span class='test-time'>31/07/2018 00:51:38</span>
-                            <span class='test-status right fail'>Fail</span>
-                        </div>
-                        <div class='test-content hide'>
-                                <div class='test-time-info'>
-                                    <span class='label start-time'>31/07/2018 00:51:38</span>
-                                    <span class='label end-time'>31/07/2018 00:51:41</span>
-                                    <span class='label time-taken grey lighten-1 white-text'>00:00:02.9036788</span>
-                                </div>
-                                    <div class='test-desc'>Optional Description</div>
-                                    <div class='test-attributes'>
-                                            <div class='category-list'>
-                                                    <span class='category label white-text'>SmokeTest</span>
-                                            </div>
-                                                                            </div>
-                                    <div class='test-steps'>
-                                        <table class='bordered table-results'>
-                                            <thead>
-                                                <tr>
-                                                    <th>Status</th>
-                                                    <th>Timestamp</th>
-                                                    <th>Details</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:40</td>
-                                                        <td class='step-details'>Step test  66367ec6-b9e6-4490-b18e-b4fa0d601e50</td>
-                                                    </tr>
-                                                    <tr class='log' status='fail'>
-                                                        <td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:40</td>
-                                                        <td class='step-details'><textarea class='code-block'>   em NUnit.Framework.Assert.ReportFailure(String message) na C:\src\nunit\nunit\src\NUnitFramework\framework\Assert.cs:linha 408
-   em NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args) na C:\src\nunit\nunit\src\NUnitFramework\framework\Assert.cs:linha 396
-   em NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args) na C:\src\nunit\nunit\src\NUnitFramework\framework\Assert.That.cs:linha 247
-   em SeleniumGridTest.Tests.GoogleFindTest.FindGooglePageIntentionalEx() na C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\Tests\GoogleFindTest.cs:linha 74</textarea></td>
-                                                    </tr>
-                                                    <tr class='log' status='fail'>
-                                                        <td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:41</td>
-                                                        <td class='step-details'>Test ended with FailTest ended with Fail   em SeleniumGridTest.Tests.GoogleFindTest.FindGooglePageIntentionalEx() na C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\Tests\GoogleFindTest.cs:linha 74</td>
-                                                    </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-                        </div>
-                    </li>
-                    <li class='test displayed active  pass' status='pass' test-id='3'>
+                    <li class='test displayed active  pass' status='pass' test-id='1'>
                         <div class='test-heading'>
                             <span class='test-name'>FindGooglePageSuccess1</span>
-                            <span class='test-time'>31/07/2018 00:51:41</span>
+                            <span class='test-time'>31/07/2018 22:25:43</span>
                             <span class='test-status right pass'>Pass</span>
                         </div>
                         <div class='test-content hide'>
                                 <div class='test-time-info'>
-                                    <span class='label start-time'>31/07/2018 00:51:41</span>
-                                    <span class='label end-time'>31/07/2018 00:51:41</span>
+                                    <span class='label start-time'>31/07/2018 22:25:43</span>
+                                    <span class='label end-time'>31/07/2018 22:25:43</span>
                                     <span class='label time-taken grey lighten-1 white-text'>00:00:00</span>
                                 </div>
                                     <div class='test-desc'>Desc</div>
@@ -292,17 +188,17 @@
 
                         </div>
                     </li>
-                    <li class='test displayed active  pass' status='pass' test-id='4'>
+                    <li class='test displayed active  error' status='error' test-id='2'>
                         <div class='test-heading'>
                             <span class='test-name'>FindGooglePageSuccess1</span>
-                            <span class='test-time'>31/07/2018 00:51:41</span>
-                            <span class='test-status right pass'>Pass</span>
+                            <span class='test-time'>31/07/2018 22:25:43</span>
+                            <span class='test-status right error'>Error</span>
                         </div>
                         <div class='test-content hide'>
                                 <div class='test-time-info'>
-                                    <span class='label start-time'>31/07/2018 00:51:41</span>
-                                    <span class='label end-time'>31/07/2018 00:51:42</span>
-                                    <span class='label time-taken grey lighten-1 white-text'>00:00:01.9313898</span>
+                                    <span class='label start-time'>31/07/2018 22:25:43</span>
+                                    <span class='label end-time'>31/07/2018 22:25:46</span>
+                                    <span class='label time-taken grey lighten-1 white-text'>00:00:03.4554738</span>
                                 </div>
                                     <div class='test-desc'>Desc</div>
                                     <div class='test-attributes'>
@@ -322,257 +218,31 @@
                                             <tbody>
                                                     <tr class='log' status='info'>
                                                         <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:42</td>
-                                                        <td class='step-details'>Step test  b08125e7-dc25-4c50-8d20-c0b29edcc372</td>
+                                                        <td class='timestamp'>31/07/2018 22:25:46</td>
+                                                        <td class='step-details'>Step test  87c2b926-3b63-4aa2-ae82-322ab9f4f884</td>
+                                                    </tr>
+                                                    <tr class='log' status='pass'>
+                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+                                                        <td class='timestamp'>31/07/2018 22:25:46</td>
+                                                        <td class='step-details'><textarea disabled class='code-block'>
+	
+		markupCodeblock
+	
+</textarea></td>
+                                                    </tr>
+                                                    <tr class='log' status='error'>
+                                                        <td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+                                                        <td class='timestamp'>31/07/2018 22:25:46</td>
+                                                        <td class='step-details'><span class='label white-text red'>markupLabel</span></td>
                                                     </tr>
                                                     <tr class='log' status='info'>
                                                         <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:42</td>
-                                                        <td class='step-details'>Step test  ba04610a-6fd0-4bcb-bf8b-31318300865e</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:42</td>
-                                                        <td class='step-details'>Step test  742f15be-896f-44ed-a77b-50135aea390b</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:42</td>
-                                                        <td class='step-details'>Step test  4f808e6f-1fc1-4ec2-abaa-6cecfc39b010</td>
-                                                    </tr>
-                                                    <tr class='log' status='info'>
-                                                        <td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:42</td>
-                                                        <td class='step-details'>Step test  54a9f5fa-b65f-4a3b-ac5c-44e5d4bd94f7</td>
+                                                        <td class='timestamp'>31/07/2018 22:25:46</td>
+                                                        <td class='step-details'>Step test  ba7561ef-59b5-402f-9aca-f3fb4dae1245</td>
                                                     </tr>
                                                     <tr class='log' status='pass'>
                                                         <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:42</td>
-                                                        <td class='step-details'>Teste passou</td>
-                                                    </tr>
-                                                    <tr class='log' status='pass'>
-                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:42</td>
-                                                        <td class='step-details'>Test ended with PassTest ended with Pass</td>
-                                                    </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-                        </div>
-                    </li>
-                    <li class='test displayed active  pass' status='pass' test-id='5'>
-                        <div class='test-heading'>
-                            <span class='test-name'>FindGooglePageSuccess2</span>
-                            <span class='test-time'>31/07/2018 00:51:42</span>
-                            <span class='test-status right pass'>Pass</span>
-                        </div>
-                        <div class='test-content hide'>
-                                <div class='test-time-info'>
-                                    <span class='label start-time'>31/07/2018 00:51:42</span>
-                                    <span class='label end-time'>31/07/2018 00:51:44</span>
-                                    <span class='label time-taken grey lighten-1 white-text'>00:00:02.0381367</span>
-                                </div>
-                                    <div class='test-desc'>Optional Description</div>
-                                    <div class='test-attributes'>
-                                            <div class='category-list'>
-                                                    <span class='category label white-text'>Exploratory</span>
-                                            </div>
-                                                                            </div>
-                                    <div class='test-steps'>
-                                        <table class='bordered table-results'>
-                                            <thead>
-                                                <tr>
-                                                    <th>Status</th>
-                                                    <th>Timestamp</th>
-                                                    <th>Details</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                    <tr class='log' status='pass'>
-                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:44</td>
-                                                        <td class='step-details'>Teste passou</td>
-                                                    </tr>
-                                                    <tr class='log' status='pass'>
-                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:44</td>
-                                                        <td class='step-details'>Test ended with PassTest ended with Pass</td>
-                                                    </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-                        </div>
-                    </li>
-                    <li class='test displayed active  pass' status='pass' test-id='6'>
-                        <div class='test-heading'>
-                            <span class='test-name'>FindGooglePageSuccess3</span>
-                            <span class='test-time'>31/07/2018 00:51:44</span>
-                            <span class='test-status right pass'>Pass</span>
-                        </div>
-                        <div class='test-content hide'>
-                                <div class='test-time-info'>
-                                    <span class='label start-time'>31/07/2018 00:51:44</span>
-                                    <span class='label end-time'>31/07/2018 00:51:47</span>
-                                    <span class='label time-taken grey lighten-1 white-text'>00:00:02.2917100</span>
-                                </div>
-                                    <div class='test-desc'>Optional Description</div>
-                                    <div class='test-attributes'>
-                                            <div class='category-list'>
-                                                    <span class='category label white-text'>Exploratory</span>
-                                            </div>
-                                                                            </div>
-                                    <div class='test-steps'>
-                                        <table class='bordered table-results'>
-                                            <thead>
-                                                <tr>
-                                                    <th>Status</th>
-                                                    <th>Timestamp</th>
-                                                    <th>Details</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                    <tr class='log' status='pass'>
-                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:47</td>
-                                                        <td class='step-details'>Teste passou</td>
-                                                    </tr>
-                                                    <tr class='log' status='pass'>
-                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:47</td>
-                                                        <td class='step-details'>Test ended with PassTest ended with Pass</td>
-                                                    </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-                        </div>
-                    </li>
-                    <li class='test displayed active  pass' status='pass' test-id='7'>
-                        <div class='test-heading'>
-                            <span class='test-name'>FindGooglePageSuccess4</span>
-                            <span class='test-time'>31/07/2018 00:51:47</span>
-                            <span class='test-status right pass'>Pass</span>
-                        </div>
-                        <div class='test-content hide'>
-                                <div class='test-time-info'>
-                                    <span class='label start-time'>31/07/2018 00:51:47</span>
-                                    <span class='label end-time'>31/07/2018 00:51:49</span>
-                                    <span class='label time-taken grey lighten-1 white-text'>00:00:02.1582387</span>
-                                </div>
-                                    <div class='test-desc'>Optional Description</div>
-                                    <div class='test-attributes'>
-                                            <div class='category-list'>
-                                                    <span class='category label white-text'>Exploratory</span>
-                                            </div>
-                                                                            </div>
-                                    <div class='test-steps'>
-                                        <table class='bordered table-results'>
-                                            <thead>
-                                                <tr>
-                                                    <th>Status</th>
-                                                    <th>Timestamp</th>
-                                                    <th>Details</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                    <tr class='log' status='pass'>
-                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:49</td>
-                                                        <td class='step-details'>Teste passou</td>
-                                                    </tr>
-                                                    <tr class='log' status='pass'>
-                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:49</td>
-                                                        <td class='step-details'>Test ended with PassTest ended with Pass</td>
-                                                    </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-                        </div>
-                    </li>
-                    <li class='test displayed active  pass' status='pass' test-id='8'>
-                        <div class='test-heading'>
-                            <span class='test-name'>FindGooglePageSuccess5</span>
-                            <span class='test-time'>31/07/2018 00:51:49</span>
-                            <span class='test-status right pass'>Pass</span>
-                        </div>
-                        <div class='test-content hide'>
-                                <div class='test-time-info'>
-                                    <span class='label start-time'>31/07/2018 00:51:49</span>
-                                    <span class='label end-time'>31/07/2018 00:51:51</span>
-                                    <span class='label time-taken grey lighten-1 white-text'>00:00:01.9883647</span>
-                                </div>
-                                    <div class='test-desc'>Optional Description</div>
-                                    <div class='test-attributes'>
-                                            <div class='category-list'>
-                                                    <span class='category label white-text'>Exploratory</span>
-                                            </div>
-                                                                            </div>
-                                    <div class='test-steps'>
-                                        <table class='bordered table-results'>
-                                            <thead>
-                                                <tr>
-                                                    <th>Status</th>
-                                                    <th>Timestamp</th>
-                                                    <th>Details</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                    <tr class='log' status='pass'>
-                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:51</td>
-                                                        <td class='step-details'>Teste passou</td>
-                                                    </tr>
-                                                    <tr class='log' status='pass'>
-                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:51</td>
-                                                        <td class='step-details'>Test ended with PassTest ended with Pass</td>
-                                                    </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-                        </div>
-                    </li>
-                    <li class='test displayed active  pass' status='pass' test-id='9'>
-                        <div class='test-heading'>
-                            <span class='test-name'>FindGooglePageSuccess6</span>
-                            <span class='test-time'>31/07/2018 00:51:51</span>
-                            <span class='test-status right pass'>Pass</span>
-                        </div>
-                        <div class='test-content hide'>
-                                <div class='test-time-info'>
-                                    <span class='label start-time'>31/07/2018 00:51:51</span>
-                                    <span class='label end-time'>31/07/2018 00:51:53</span>
-                                    <span class='label time-taken grey lighten-1 white-text'>00:00:02.1962268</span>
-                                </div>
-                                    <div class='test-desc'>Optional Description</div>
-                                    <div class='test-attributes'>
-                                            <div class='category-list'>
-                                                    <span class='category label white-text'>Exploratory</span>
-                                            </div>
-                                                                            </div>
-                                    <div class='test-steps'>
-                                        <table class='bordered table-results'>
-                                            <thead>
-                                                <tr>
-                                                    <th>Status</th>
-                                                    <th>Timestamp</th>
-                                                    <th>Details</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                    <tr class='log' status='pass'>
-                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:53</td>
-                                                        <td class='step-details'>Teste passou</td>
-                                                    </tr>
-                                                    <tr class='log' status='pass'>
-                                                        <td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-                                                        <td class='timestamp'>31/07/2018 00:51:53</td>
+                                                        <td class='timestamp'>31/07/2018 22:25:46</td>
                                                         <td class='step-details'>Test ended with PassTest ended with Pass</td>
                                                     </tr>
                                             </tbody>
@@ -632,48 +302,13 @@
 
                         <li class='category displayed active'>
                             <div class='category-heading'>
-                                <span class='category-name'>SmokeTest</span>
-                                <span class='category-status right'>
-                                     <span class='label fail'>2</span>                                                                     </span>
-                            </div>
-                            <div class='category-content hide'>
-                                <div class='category-status-counts'>
-                                     <span class='label red lighten-1 white-text'>Failed: 2</span>                                                                     </div>
-
-                                <div class='category-tests'>
-                                    <table class='bordered table-results'>
-                                        <thead>
-                                            <tr>
-                                                <th>Timestamp</th>
-                                                <th>TestName</th>
-                                                <th>Status</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                    <td>31/07/2018 00:51:31</td>
-                                                    <td class='linked' test-id='1'>FindGooglePageFail1</td>
-                                                    <td><span class='test-status fail'>Fail</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>31/07/2018 00:51:38</td>
-                                                    <td class='linked' test-id='2'>FindGooglePageIntentionalEx</td>
-                                                    <td><span class='test-status fail'>Fail</span></td>
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-                        <li class='category displayed active'>
-                            <div class='category-heading'>
                                 <span class='category-name'>Critical</span>
                                 <span class='category-status right'>
- <span class='label pass'>2</span>                                                                                                         </span>
+ <span class='label pass'>1</span>                                                                          <span class='label others'>1</span>                                 </span>
                             </div>
                             <div class='category-content hide'>
                                 <div class='category-status-counts'>
- <span class='label green accent-4 white-text'>Passed: 2</span>                                                                                                         </div>
+ <span class='label green accent-4 white-text'>Passed: 1</span>                                                                          <span class='label yellow darken-2 white-text'>Others: 1</span>                                 </div>
 
                                 <div class='category-tests'>
                                     <table class='bordered table-results'>
@@ -686,64 +321,14 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                    <td>31/07/2018 00:51:41</td>
-                                                    <td class='linked' test-id='3'>FindGooglePageSuccess1</td>
+                                                    <td>31/07/2018 22:25:43</td>
+                                                    <td class='linked' test-id='1'>FindGooglePageSuccess1</td>
                                                     <td><span class='test-status pass'>Pass</span></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>31/07/2018 00:51:41</td>
-                                                    <td class='linked' test-id='4'>FindGooglePageSuccess1</td>
-                                                    <td><span class='test-status pass'>Pass</span></td>
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-                        <li class='category displayed active'>
-                            <div class='category-heading'>
-                                <span class='category-name'>Exploratory</span>
-                                <span class='category-status right'>
- <span class='label pass'>5</span>                                                                                                         </span>
-                            </div>
-                            <div class='category-content hide'>
-                                <div class='category-status-counts'>
- <span class='label green accent-4 white-text'>Passed: 5</span>                                                                                                         </div>
-
-                                <div class='category-tests'>
-                                    <table class='bordered table-results'>
-                                        <thead>
-                                            <tr>
-                                                <th>Timestamp</th>
-                                                <th>TestName</th>
-                                                <th>Status</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                    <td>31/07/2018 00:51:42</td>
-                                                    <td class='linked' test-id='5'>FindGooglePageSuccess2</td>
-                                                    <td><span class='test-status pass'>Pass</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>31/07/2018 00:51:44</td>
-                                                    <td class='linked' test-id='6'>FindGooglePageSuccess3</td>
-                                                    <td><span class='test-status pass'>Pass</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>31/07/2018 00:51:47</td>
-                                                    <td class='linked' test-id='7'>FindGooglePageSuccess4</td>
-                                                    <td><span class='test-status pass'>Pass</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>31/07/2018 00:51:49</td>
-                                                    <td class='linked' test-id='8'>FindGooglePageSuccess5</td>
-                                                    <td><span class='test-status pass'>Pass</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>31/07/2018 00:51:51</td>
-                                                    <td class='linked' test-id='9'>FindGooglePageSuccess6</td>
-                                                    <td><span class='test-status pass'>Pass</span></td>
+                                                    <td>31/07/2018 22:25:43</td>
+                                                    <td class='linked' test-id='2'>FindGooglePageSuccess1</td>
+                                                    <td><span class='test-status error'>Error</span></td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -789,35 +374,6 @@
                 <h5>Exceptions</h5>
                 <ul id='exception-collection' class='exception-collection'>
 
-                        <li class='exception displayed active'>
-                            <div class='exception-heading'>
-                                <span class='exception-name'>NUnit.Framework.AssertionException</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-                            </div>
-                            <div class='exception-content hide'>
-                                <div class='exception-tests'>
-                                    <table class='bordered table-results'>
-                                        <thead>
-                                            <tr>
-                                                <th>Timestamp</th>
-                                                <th>TestName</th>
-                                                <th>Status</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                    <td>31/07/2018 00:51:38</td>
-                                                    <td class='linked' test-id='2'>FindGooglePageIntentionalEx</td>
-                                                    <td><textarea class='code-block'>   em NUnit.Framework.Assert.ReportFailure(String message) na C:\src\nunit\nunit\src\NUnitFramework\framework\Assert.cs:linha 408
-   em NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, Object[] args) na C:\src\nunit\nunit\src\NUnitFramework\framework\Assert.cs:linha 396
-   em NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, String message, Object[] args) na C:\src\nunit\nunit\src\NUnitFramework\framework\Assert.That.cs:linha 247
-   em SeleniumGridTest.Tests.GoogleFindTest.FindGooglePageIntentionalEx() na C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\Tests\GoogleFindTest.cs:linha 74</textarea></td>
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
                 </ul>
             </div>
         </div>
@@ -839,30 +395,30 @@
         <div class='row'>
             <div class='col s2'>
                 <div class='card-panel r'>
- <span>Tests</span>                     <div class='panel-lead'>9</div>
+ <span>Tests</span>                     <div class='panel-lead'>2</div>
                 </div>
             </div>
             <div class='col s2'>
                 <div class='card-panel r'>
- <span>Steps</span>                     <div class='panel-lead'>23</div>
+ <span>Steps</span>                     <div class='panel-lead'>5</div>
                 </div>
             </div>
             <div class='col s2'>
                 <div class='card-panel r'>
                     Start
-                    <div class='panel-lead'>31/07/2018 00:51:31</div>
+                    <div class='panel-lead'>31/07/2018 22:25:42</div>
                 </div>
             </div>
             <div class='col s2'>
                 <div class='card-panel r'>
                     End
-                    <div class='panel-lead'>31/07/2018 00:51:58</div>
+                    <div class='panel-lead'>31/07/2018 22:25:50</div>
                 </div>
             </div>
             <div class='col s2'>
                 <div class='card-panel r'>
                     Time Taken
-                    <div class='panel-lead'>00:00:26.8957917</div>
+                    <div class='panel-lead'>00:00:07.5213535</div>
                 </div>
             </div>
 
@@ -880,25 +436,11 @@
 								<th>Passed %</th>
                             </tr>
                                 <tr>
-                                    <td>SmokeTest</td>
-                                    <td>0</td>
-                                    <td>2</td>
-                                    <td>0</td>
-									<td>0%</td>
-                                </tr>
-                                <tr>
                                     <td>Critical</td>
-                                    <td>2</td>
+                                    <td>1</td>
                                     <td>0</td>
-                                    <td>0</td>
-									<td>100%</td>
-                                </tr>
-                                <tr>
-                                    <td>Exploratory</td>
-                                    <td>5</td>
-                                    <td>0</td>
-                                    <td>0</td>
-									<td>100%</td>
+                                    <td>1</td>
+									<td>50%</td>
                                 </tr>
                         </table>
                     </div>
@@ -917,20 +459,20 @@
 
 		<script>
 			var statusGroup = {
-			    passParent: 7,
-			    failParent: 2,
+			    passParent: 1,
+			    failParent: 0,
 			    fatalParent: 0,
-			    errorParent: 0,
+			    errorParent: 1,
 			    warningParent: 0,
 			    skipParent: 0,
 				
-			    passChild: 12,
-			    failChild: 4,
+			    passChild: 2,
+			    failChild: 0,
 			    fatalChild: 0,
-			    errorChild: 0,
+			    errorChild: 1,
 			    warningChild: 0,
 			    skipChild: 0,
-			    infoChild: 7,
+			    infoChild: 2,
 				
 			    passGrandChild: 0,
 			    failGrandChild: 0,

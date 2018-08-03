@@ -1,5 +1,7 @@
 ﻿using AventStack.ExtentReports;
+using AventStack.ExtentReports.MarkupUtils;
 using AventStack.ExtentReports.Reporter;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -9,13 +11,13 @@ using System.Threading.Tasks;
 
 namespace SeleniumGridTest.AdvancedReport
 {
-    public static class Reporter
+    public class Reporter
     {
         public static ExtentReports extent;
         public static ExtentTest test;
         public static KlovReporter klov;
 
-        public static string pathToReport = @"C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest\bin\Debug\";
+        public static string pathToReport = @"C:\Users\ramon\source\repos\SeleniumGridTest\SeleniumGridTest.UI.Tests\bin\Debug\";
         public static string reportName = "RelatorioDeTestes - ";
         private static string path = NunitTestHelper.GetPathToProject();
 
@@ -23,12 +25,12 @@ namespace SeleniumGridTest.AdvancedReport
         public static void CreateReport()
         {
             var htmlReporter = new ExtentHtmlReporter(pathToReport + reportName + DateTime.Now.ToString("dd-MM-yyyy")+ ".html");
-            var environment = ConfigurationManager.AppSettings["environment"];
+            var KlovManager = ConfigurationManager.AppSettings["EnableKlov"];
 
             // create ExtentReports and attach reporter(s)
             extent = new ExtentReports();
             
-            if (environment =="production")
+            if (KlovManager == "True")
             {
                 klov = new KlovReporter();
 
@@ -69,6 +71,18 @@ namespace SeleniumGridTest.AdvancedReport
 
         }
 
+        public static void LogPass(string text)
+        {
+            test.Pass(text);
+
+        }
+
+        public static void LogFail(string text)
+        {
+            test.Fail(text);
+            Assert.Fail();
+
+        }
         public static void exceptionLog(Exception ex)
         {
             test.Fail(ex);
@@ -94,75 +108,23 @@ namespace SeleniumGridTest.AdvancedReport
         {
             test.Info("Step test  " + Guid.NewGuid());
         }
-        //public static ExtentReport extent {get;set;}
-
-        //public void StartReport() { }
-
-        //var htmlReporter = new ExtentHtmlReporter("extent.html");
-
-        //// create ExtentReports and attach reporter(s)
-        //var extent = new ExtentReports();
-        //extent.AttachReporter(htmlReporter);
-
-        //// creates a toggle for the given test, adds all log events under it    
-        //var test = extent.CreateTest("MyFirstTest", "Sample description");
-
-        //// log(Status, details)
-        //test.Log(Status.Info, "This step shows usage of log(status, details)");
-
-        //// info(details)
-        //test.Info("This step shows usage of info(details)");
-
-        //// log with snapshot
-        //test.Fail("details", MediaEntityBuilder.CreateScreenCaptureFromPath("screenshot.png").Build());
-
-        //// test with snapshot
-        //test.AddScreenCaptureFromPath("screenshot.png");
-
-        //// calling flush writes everything to the log file
-        //extent.Flush();
-        //var htmlReporter = new ExtentHtmlReporter("extent.html");
-
-        //// create ExtentReports and attach reporter(s)
-        //var extent = new ExtentReports();
-        //extent.AttachReporter(htmlReporter);
-
-        //// creates a toggle for the given test, adds all log events under it    
-        //var test = extent.CreateTest("MyFirstTest", "Sample description");
-
-        //// log(Status, details)
-        //test.Log(Status.Info, "This step shows usage of log(status, details)");
-
-        //// info(details)
-        //test.Info("This step shows usage of info(details)");
-
-        //// log with snapshot
-        //test.Fail("details", MediaEntityBuilder.CreateScreenCaptureFromPath("screenshot.png").Build());
-
-        //// test with snapshot
-        //test.AddScreenCaptureFromPath("screenshot.png");
-
-        //// calling flush writes everything to the log file
-        //extent.Flush();
-
-        public static void CreateManagerReport()
+         
+        public static void markupCodeblock(string text, Status status)
         {
-            //var klovReporter = new KlovReporter();
+            String code = "\n\t\n\t\t"+text+"\n\t\n";
+            IMarkup m = MarkupHelper.CreateCodeBlock(code);
+            
 
-            //// specify mongoDb connection
-            //klovReporter.InitMongoDbConnection("localhost", 27017);
-
-            //// specify project ! you must specify a project, other a "Default project will be used"
-            //klovReporter.ProjectName = "CsharpReports";
-
-            //// you must specify a reportName otherwise a default timestamp will be used
-            //klovReporter.ReportName = "Build " + DateTime.Now.ToString();
-
-            //// URL of the KLOV server
-            //klovReporter.KlovUrl = "http://localhost";
-            //extent.AttachReporter(klovReporter);
-
-
+            test.Log(status, m);
         }
+
+        public static void markupLabel(string text, Status status, ExtentColor color)
+        {
+            
+            IMarkup m = MarkupHelper.CreateLabel(text, color);
+            
+            test.Log(status, m);
+        }
+
     }
 }
