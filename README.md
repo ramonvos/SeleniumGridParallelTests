@@ -4,15 +4,32 @@
 
 ### Pre requirements:
 
+### Advanced Manager Report:
 1. Download and Install MongoDB: https://www.mongodb.com/download-center#community
 2. Download and Run Klov .jar : http://extentreports.com/community/
+
 
 ### Framework Dependencies:
 1. Extent Reports
 2. Nunit
 3. Selenium Webdriver
 
-### Setup:
+### Setup Parallelizable tests
+#### Selenium Grid Selenium Standalone
+1. Download Selenium Standalone Server .jar https://www.seleniumhq.org/download/
+2. Run jar file and create hub: java -jar selenium-server-standalone-<version>.jar -role hub
+3. Run lar file and register node: java -jar selenium-server-standalone-<version>.jar -role node  -hub http://localhost:4444/grid/register
+  
+#### Docker Zalenium (Scalable container based Selenium Grid)
+1. download and install docker
+2. Pull docker-selenium: docker pull elgalu/selenium 
+3. Pull Zalenium: docker pull dosel/zalenium
+4. Run it:  docker run --rm -ti --name zalenium -p 4444:4444 \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v /tmp/videos:/home/seluser/videos \
+    --privileged dosel/zalenium start
+        
+### Setup Advanced Report:
 
 1. Run MongoDB
 2. Run Klov: java -jar klov-x.x.x. .jar
