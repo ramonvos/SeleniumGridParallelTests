@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 using SeleniumGridTest.Selenium.SeleniumPages;
-using SeleniumGridTest.UI.Tests.TestBase;
+using SeleniumGridTest.UI.Tests.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +11,7 @@ namespace SeleniumGridTest.UI.Tests.Tests
 {
     [TestFixture]
     [Parallelizable(ParallelScope.Self)]
-    public class GoogleTestCaseFail : BaseTest
+    public class GoogleTestCaseFail : TestBase
     {
 
         [Test, Description("Desc"), Category("SmokeTest")]

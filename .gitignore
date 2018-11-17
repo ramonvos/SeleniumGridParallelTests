@@ -1,0 +1,7 @@
+/.vs
+/SeleniumGridTest.UI.Tests/bin
+/SeleniumGridTest.UI.Tests/obj
+/SeleniumGridTest.Selenium/obj
+/SeleniumGridTest.Selenium/bin
+/SeleniumGridTest/bin
+/SeleniumGridTest/obj

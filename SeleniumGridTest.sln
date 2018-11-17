@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumGridTest", "SeleniumGridTest\SeleniumGridTest.csproj", "{47FFC601-FB3D-4E86-B7D0-D3EEA31E52D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumGridTest.Helpers", "SeleniumGridTest.Helpers\SeleniumGridTest.Helpers.csproj", "{47FFC601-FB3D-4E86-B7D0-D3EEA31E52D1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumGridTest.UI.Tests", "SeleniumGridTest.UI.Tests\SeleniumGridTest.UI.Tests.csproj", "{ED2AD054-0FCF-49F2-840A-642AD2D8D99C}"
 EndProject

@@ -1,4 +1,7 @@
 using NUnit.Framework;
+using SeleniumGridTest.Helpers.SetupParallel;
+using System;
+using System.Configuration;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -12,7 +15,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: Parallelizable(ParallelScope.Fixtures)]
-[assembly: LevelOfParallelism(5)]
+[assembly: LevelOfParallelism(1)]
+//[assembly: LevelOfParallelism(ConfigParallelTests.LevelOfParallelism)]
 
 [assembly: ComVisible(false)]
 

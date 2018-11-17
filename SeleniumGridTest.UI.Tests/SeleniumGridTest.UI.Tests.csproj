@@ -109,10 +109,27 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="TestBase\BaseTest.cs" />
+    <Compile Include="Base\TestBase.cs" />
+    <Compile Include="Resources\MessagesNewBug.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessagesNewBug.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TestData\ConstanstsTestData.cs" />
+    <Compile Include="Tests\CreateNewBugTests.cs" />
+    <Compile Include="Tests\DeleteBugsTest.cs" />
     <Compile Include="Tests\GoogleTestCase.cs" />
     <Compile Include="Tests\GoogleTestCaseFail.cs" />
     <Compile Include="Tests\GoogleTestCaseSuccess.cs" />
+    <Compile Include="Tests\ListBugsTests.cs" />
+    <Compile Include="Tests\LoginTests.cs" />
+    <Compile Include="Tests\ManageCustomFieldsTests.cs" />
+    <Compile Include="Tests\ManageProjectsTests.cs" />
+    <Compile Include="Tests\ManageTagsTests.cs" />
+    <Compile Include="Tests\ManageUsersTests.cs" />
+    <Compile Include="Tests\UpdateBugsChangeStatusTests.cs" />
+    <Compile Include="Tests\UpdateBugsStepsTests.cs" />
+    <Compile Include="Tests\ViewBugDetailsTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -127,14 +144,20 @@
     <Content Include="extent-config.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SeleniumGridTest.Helpers\SeleniumGridTest.Helpers.csproj">
+      <Project>{47FFC601-FB3D-4E86-B7D0-D3EEA31E52D1}</Project>
+      <Name>SeleniumGridTest.Helpers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SeleniumGridTest.Selenium\SeleniumGridTest.Selenium.csproj">
       <Project>{7202FA30-E9B8-4EFD-AF8E-087EB0DE335B}</Project>
       <Name>SeleniumGridTest.Selenium</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SeleniumGridTest\SeleniumGridTest.csproj">
-      <Project>{47FFC601-FB3D-4E86-B7D0-D3EEA31E52D1}</Project>
-      <Name>SeleniumGridTest</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\MessagesNewBug.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MessagesNewBug.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

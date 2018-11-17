@@ -76,16 +76,22 @@
     <Compile Include="SeleniumComponents\SeleniumUtils.cs" />
     <Compile Include="SeleniumComponents\SeleniumWait.cs" />
     <Compile Include="SeleniumFactory\BasePage.cs" />
-    <Compile Include="SeleniumFactory\DriverFactory.cs" />
+    <Compile Include="SeleniumPages\CreateNewBugPage.cs" />
+    <Compile Include="SeleniumPages\DeleteBugSPage.cs" />
     <Compile Include="SeleniumPages\GooglePage.cs" />
+    <Compile Include="SeleniumPages\HomePage.cs" />
+    <Compile Include="SeleniumPages\ListBugPage.cs" />
+    <Compile Include="SeleniumPages\LoginPage.cs" />
+    <Compile Include="SeleniumPages\PageObject.cs" />
+    <Compile Include="SeleniumPages\UpdateBugStepsPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SeleniumGridTest\SeleniumGridTest.csproj">
+    <ProjectReference Include="..\SeleniumGridTest.Helpers\SeleniumGridTest.Helpers.csproj">
       <Project>{47FFC601-FB3D-4E86-B7D0-D3EEA31E52D1}</Project>
-      <Name>SeleniumGridTest</Name>
+      <Name>SeleniumGridTest.Helpers</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

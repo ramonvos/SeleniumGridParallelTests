@@ -1,11 +1,5 @@
 ﻿using OpenQA.Selenium;
-using SeleniumGridTest.AdvancedReport;
 using SeleniumGridTest.Selenium.SeleniumComponents;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SeleniumGridTest.Selenium.SeleniumFactory
 {

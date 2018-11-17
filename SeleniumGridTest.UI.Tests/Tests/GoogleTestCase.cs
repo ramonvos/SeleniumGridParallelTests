@@ -1,8 +1,9 @@
 ﻿using NUnit.Framework;
 using SeleniumGridTest.Selenium.SeleniumPages;
-using SeleniumGridTest.UI.Tests.TestBase;
+using SeleniumGridTest.UI.Tests.Base;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,14 +12,14 @@ namespace SeleniumGridTest.UI.Tests.Tests
 {
     [TestFixture]
     [Parallelizable(ParallelScope.Self)]
-    public class GoogleTestCase : BaseTest
+    public class GoogleTestCase : TestBase
     {
 
         [Test, Description("Desc"), Category("Critical")]
         public void FindGooglePageSuccess1()
         {
             //AdvancedReport.Reporter.AddTest();
-
+            int level = Convert.ToInt32(ConfigurationManager.AppSettings["LevelOfParallelism"]);
             string text = "Selenium lesson page";
             GooglePage page = new GooglePage(_driver);
 
