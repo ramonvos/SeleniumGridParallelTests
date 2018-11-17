@@ -5,3 +5,5 @@
 /SeleniumGridTest.Selenium/bin
 /SeleniumGridTest/bin
 /SeleniumGridTest/obj
+/SeleniumGridTest.Helpers/bin
+/SeleniumGridTest.Helpers/obj
