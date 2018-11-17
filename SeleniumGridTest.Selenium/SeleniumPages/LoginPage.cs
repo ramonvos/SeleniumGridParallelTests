@@ -1,4 +1,6 @@
 ﻿using OpenQA.Selenium;
+using SeleniumGridTest.Helpers;
+using SeleniumGridTest.Helpers.Helpers;
 using SeleniumGridTest.Helpers.SeleniumFactory;
 using System;
 using System.Collections.Generic;
@@ -11,11 +13,19 @@ namespace SeleniumGridTest.Selenium.SeleniumPages
 {
     public class LoginPage : DriverFactory
     {
-
+        
         public IWebDriver Instance { get; set; }
+        TextBoxHelper objText = null;
+        ButtonHelper objButton = null;
+        LinkHelper objLink = null;
+
+
         public LoginPage(IWebDriver driver) : base(driver)
         {
             Instance = driver;
+            objText = new TextBoxHelper(Instance);
+            objButton = new ButtonHelper(Instance);
+            objLink = new LinkHelper(Instance);
         }
 
         public IWebElement txtLogin => Instance.FindElement(By.Id("username"));
@@ -31,20 +41,21 @@ namespace SeleniumGridTest.Selenium.SeleniumPages
         public LoginPage NavigateToLoginPage()
         {
             Instance.Manage().Cookies.DeleteAllCookies();
-            //NavigationHelper.NavigateToPage(ConfigurationManager.AppSettings["URL_BASE"] + "login_page.php");
+            NavigationHelper objNav = new NavigationHelper(Instance);
+            objNav.NavigateToPage(ConfigurationManager.AppSettings["URL_BASE"] + "login_page.php");
 
             return new LoginPage(Instance);
         }
 
         public LoginPage LogIn()
         {
-            string user = ConfigurationManager.AppSettings["USERNAME"];
-            string pass = ConfigurationManager.AppSettings["PASSWORD"];
-            //txtLogin.TypeInTextBox(user);
-            //btnEntrar.ClickButton();
+            string user = ConfigurationManager.AppSettings["username"];
+            string pass = ConfigurationManager.AppSettings["password"];
+            objText.TypeInTextBox(txtLogin,user);
+            objButton.ClickButton(btnEntrar);
 
-            //txtPass.TypeInTextBox(pass);
-            //btnEntrar.ClickButton();
+            objText.TypeInTextBox(txtPass,pass);
+            objButton.ClickButton(btnEntrar);
 
             return new LoginPage(Instance);
 
@@ -53,21 +64,15 @@ namespace SeleniumGridTest.Selenium.SeleniumPages
 
         public LoginPage LogIn(string user, string pass)
         {
-
-            //txtLogin.TypeInTextBox(user);
-            //btnEntrar.ClickButton();
-            //if (user.HasValue())
-            //{
-            //    txtPass.TypeInTextBox(pass);
-            //    btnEntrar.ClickButton();
-            //}
-
-
-
+            objText.TypeInTextBox(txtLogin, user);
+            objButton.ClickButton(btnEntrar);
+            if (user.HasValue())
+            {
+                objText.TypeInTextBox(txtPass, pass);
+                objButton.ClickButton(btnEntrar);
+            }
 
             return new LoginPage(Instance);
-
-
         }
 
         public LoginPage LogInDataDriven(string key)

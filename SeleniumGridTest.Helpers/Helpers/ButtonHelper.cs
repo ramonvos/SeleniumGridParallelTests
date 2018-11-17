@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using SeleniumGridTest.Helpers.SeleniumFactory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,19 +8,27 @@ using System.Threading.Tasks;
 
 namespace SeleniumGridTest.Helpers.Helpers
 {
-    public static class ButtonHelper
+    public class ButtonHelper : DriverFactory
     {
-        public static object ProjectUtilities { get; private set; }
+        public object ProjectUtilities { get; private set; }
 
-        public static void ClickButton(this IWebElement element)
+        private IWebDriver Instance { get; set; }
+        private IWebElement element;
+
+        public ButtonHelper(IWebDriver driver) : base(driver)
+        {
+            Instance = driver;
+        }
+
+
+
+
+
+        public void ClickButton(IWebElement element)
         {
             SeleniumGetMethods.GetElement(element);
             //Reporter.AddTestInfo(GetCurrentMethod() + " => " + "Elemento encontrado: " + element.GetElementAttribute());
             element.Click();
-
-
-
-
         }
 
         public static bool IsButtonEnabled(IWebElement element)
@@ -28,7 +37,7 @@ namespace SeleniumGridTest.Helpers.Helpers
             return element.Enabled;
         }
 
-        public static string GetButtonText(IWebElement element)
+        public string GetButtonText(IWebElement element)
         {
             SeleniumGetMethods.GetElement(element);
 

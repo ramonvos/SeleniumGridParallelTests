@@ -107,6 +107,9 @@
   <ItemGroup>
     <Compile Include="AdvancedReport\Reporter.cs" />
     <Compile Include="Helpers\ButtonHelper.cs" />
+    <Compile Include="Helpers\ComboBoxHelper.cs" />
+    <Compile Include="Helpers\LinkHelper.cs" />
+    <Compile Include="Helpers\NavigationHelper.cs" />
     <Compile Include="Helpers\NunitTestHelper.cs" />
     <Compile Include="Helpers\SeleniumGetMethods.cs" />
     <Compile Include="Helpers\Utilities.cs" />

@@ -76,8 +76,8 @@ namespace SeleniumGridTest.UI.Tests.Base
         [OneTimeTearDown]
         public void TearDown()
         {
-            _driver.Quit();
-            _driver = null;
+            //_driver.Quit();
+            //_driver = null;
         }
     }
 }

@@ -1,11 +1,21 @@
 ﻿using OpenQA.Selenium;
+using SeleniumGridTest.Helpers.SeleniumFactory;
 using System;
 
 namespace SeleniumGridTest.Helpers
 {
-    public static class TextBoxHelper
-    {   
-        public static void TypeInTextBox(this IWebElement element, string value)
+    public class TextBoxHelper : DriverFactory
+    {
+
+        private IWebDriver Instance { get; set; }
+        private IWebElement element;
+
+        public TextBoxHelper(IWebDriver driver) : base(driver)
+        {
+            Instance = driver;
+        }
+
+        public void TypeInTextBox(IWebElement element, string value)
         {
             if (value.HasValue())
             {
@@ -14,28 +24,28 @@ namespace SeleniumGridTest.Helpers
 
         }
 
-        public static void ClearTextBox(this IWebElement element)
+        public void ClearTextBox(IWebElement element)
         {
             element.Clear();
         }
 
-        public static void TypeInTextBoxWithMask(this IWebElement element, string text)
+        public void TypeInTextBoxWithMask(IWebElement element, string text)
         {
             int aux = 0; 
             while(element.Text != text && aux < 10)
             {
-                element.ClearTextBox();
-                element.TypeInTextBox(text);
+                ClearTextBox(element);
+                TypeInTextBox(element,text);
                 aux++;
             }
             
         }
 
-        public static String GetTextInTextBox(this IWebElement element)
+        public String GetTextInTextBox(IWebElement element)
         {
             return element.Text;
         }
-        public static String GetValueInTextBox(this IWebElement element)
+        public  String GetValueInTextBox(IWebElement element)
         {
             return element.GetAttribute("value");
         }

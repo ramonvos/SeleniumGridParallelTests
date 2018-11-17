@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using SeleniumGridTest.Helpers;
 using SeleniumGridTest.Helpers.Helpers;
 using SeleniumGridTest.Selenium.SeleniumFactory;
 using System;
@@ -12,9 +13,16 @@ namespace SeleniumGridTest.Selenium.SeleniumPages
     public class CreateNewBugPage : BasePage
     {
         public IWebDriver Instance { get; set; }
+
+        ButtonHelper objButton = null;
+        ComboBoxHelper objCombo = null;
+        TextBoxHelper objText = null;
         public CreateNewBugPage(IWebDriver driver) : base(driver)
         {
             Instance = driver;
+            objButton = new ButtonHelper(Instance);
+            objCombo = new ComboBoxHelper(Instance);
+            objText = new TextBoxHelper(Instance);
         }
 
         public const String url = "";
@@ -66,7 +74,7 @@ namespace SeleniumGridTest.Selenium.SeleniumPages
 
         public CreateNewBugPage OpenNewBugPage()
         {
-            ButtonHelper.ClickButton(linkCriarTarefa);
+            objButton.ClickButton(linkCriarTarefa);
 
             return new CreateNewBugPage(Instance);
         }
@@ -75,10 +83,10 @@ namespace SeleniumGridTest.Selenium.SeleniumPages
         {
 
             //WaitForElementHelpers.WaitForElementDisplayed(locatorDdlCategoria);
-            //ddlCategoria.SelectText(categoria);
-            //ddlFrequecia.SelectText(frequencia);
-            //ddlGravidade.SelectText(gravidade);
-            //ddlPrioridade.SelectText(prioridade);
+            objCombo.SelectText(ddlCategoria,categoria);
+            objCombo.SelectText(ddlFrequecia,frequencia);
+            objCombo.SelectText(ddlGravidade, gravidade);
+            objCombo.SelectText(ddlPrioridade, prioridade);
             //if (selecionarPerfil)
             //{
             //    if (SelecionarPerfilOculto())
@@ -88,16 +96,16 @@ namespace SeleniumGridTest.Selenium.SeleniumPages
 
 
             //    WaitForElementHelpers.WaitForElementDisplayed(locatortxtPlataforma);
-            //    txtPlataforma.TypeInTextBox(plataforma);
+            // objText.TypeInTextBox(txtPlataforma,plataforma);
             //    txtSO.TypeInTextBox(so);
             //    txtVersaoSO.TypeInTextBox(versaoSo);
             //}
 
             //ddlAtribuir.SelectText(atribuirA);
 
-            //txtResumo.TypeInTextBox(resumo);
-            //txtDescricao.TypeInTextBox(descricao);
-            //txtPassos.TypeInTextBox(passos);
+            objText.TypeInTextBox(txtResumo,resumo);
+            objText.TypeInTextBox(txtDescricao,descricao);
+            objText.TypeInTextBox(txtPassos,passos);
 
             //txtAdicionais.TypeInTextBox(informacoesAdicionais);
 
@@ -119,7 +127,7 @@ namespace SeleniumGridTest.Selenium.SeleniumPages
         public CreateNewBugPage saveNewBug()
         {
 
-           // btnSalvar.ClickButton();
+            objButton.ClickButton(btnSalvar);
 
             return new CreateNewBugPage(Instance);
         }

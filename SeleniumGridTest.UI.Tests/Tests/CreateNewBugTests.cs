@@ -12,7 +12,8 @@ using System.Threading.Tasks;
 
 namespace SeleniumGridTest.UI.Tests.Tests
 {
-    [TestFixture, Order(2)]
+    [TestFixture, Order(1), Parallelizable(ParallelScope.All)]
+    
     public class CreateNewBugTests : TestBase
     {
         [PageObject] LoginPage objLogin;

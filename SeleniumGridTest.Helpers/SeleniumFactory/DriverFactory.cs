@@ -61,7 +61,7 @@ namespace SeleniumGridTest.Helpers.SeleniumFactory
 
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(timeout);
             _driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(timeout);
-
+            _driver.Manage().Window.Maximize();
             return _driver;
         }
 
@@ -78,6 +78,8 @@ namespace SeleniumGridTest.Helpers.SeleniumFactory
             chromeOptions.AddUserProfilePreference("disable-popup-blocking", "true");
             chromeOptions.AddArguments("--start-maximized");
             chromeOptions.AddArguments("--headless");
+            chromeOptions.AddArguments("lang=en-US");
+
 
             return new RemoteWebDriver(uri, chromeOptions);
         }
@@ -87,6 +89,10 @@ namespace SeleniumGridTest.Helpers.SeleniumFactory
             var chromeOptions = new ChromeOptions();
             chromeOptions.AddUserProfilePreference("e.default_directory", AppDomain.CurrentDomain.BaseDirectory.Replace("bin\\Debug\\", "Downloads"));
             chromeOptions.AddUserProfilePreference("disable-popup-blocking", "true");
+            chromeOptions.AddArguments("--start-maximized");
+            chromeOptions.AddArguments("--headless");
+            chromeOptions.AddArguments("--start-maximized");
+            chromeOptions.AddArguments("lang=en-US");
 
             return new ChromeDriver(chromeOptions);
         }

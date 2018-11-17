@@ -14,48 +14,48 @@ namespace SeleniumGridTest.UI.Tests.Tests
     public class GoogleTestCaseSuccess : TestBase
     {
 
-        [Test, Description("Desc"), Category("Parallel")]
-        public void FindGooglePageSuccess7()
-        {
-            //AdvancedReport.Reporter.AddTest();
+        //[Test, Description("Desc"), Category("Parallel")]
+        //public void FindGooglePageSuccess7()
+        //{
+        //    //AdvancedReport.Reporter.AddTest();
 
-            string text = "Selenium lesson page";
-            GooglePage page = new GooglePage(_driver);
+        //    string text = "Selenium lesson page";
+        //    GooglePage page = new GooglePage(_driver);
 
-            page.OpenGooglePage().FindGoogle(text);
+        //    page.OpenGooglePage().FindGoogle(text);
 
-            Assert.That(_driver.PageSource.Contains("Free Selenium Tutorials - Guru99"), Is.EqualTo(true), "Erro ao validar o texto!");
+        //    Assert.That(_driver.PageSource.Contains("Free Selenium Tutorials - Guru99"), Is.EqualTo(true), "Erro ao validar o texto!");
 
-        }
+        //}
 
 
-        [Test, Description("Desc"), Category("Parallel")]
-        public void FindGooglePageSuccess8()
-        {
-            //AdvancedReport.Reporter.AddTest();
+        //[Test, Description("Desc"), Category("Parallel")]
+        //public void FindGooglePageSuccess8()
+        //{
+        //    //AdvancedReport.Reporter.AddTest();
 
-            string text = "Selenium lesson page";
-            GooglePage page = new GooglePage(_driver);
+        //    string text = "Selenium lesson page";
+        //    GooglePage page = new GooglePage(_driver);
 
-            page.OpenGooglePage().FindGoogle(text);
+        //    page.OpenGooglePage().FindGoogle(text);
 
-            Assert.That(_driver.PageSource.Contains("Free Selenium Tutorials - Guru99"), Is.EqualTo(true), "Erro ao validar o texto!");
+        //    Assert.That(_driver.PageSource.Contains("Free Selenium Tutorials - Guru99"), Is.EqualTo(true), "Erro ao validar o texto!");
 
-        }
+        //}
 
-        [Test, Description("Desc"), Category("Parallel")]
-        public void FindGooglePageSuccess9()
-        {
-            //AdvancedReport.Reporter.AddTest();
+        //[Test, Description("Desc"), Category("Parallel")]
+        //public void FindGooglePageSuccess9()
+        //{
+        //    //AdvancedReport.Reporter.AddTest();
 
-            string text = "Selenium lesson page";
-            GooglePage page = new GooglePage(_driver);
+        //    string text = "Selenium lesson page";
+        //    GooglePage page = new GooglePage(_driver);
 
-            page.OpenGooglePage().FindGoogle(text);
+        //    page.OpenGooglePage().FindGoogle(text);
 
-            Assert.That(_driver.PageSource.Contains("Free Selenium Tutorials - Guru99"), Is.EqualTo(true), "Erro ao validar o texto!");
+        //    Assert.That(_driver.PageSource.Contains("Free Selenium Tutorials - Guru99"), Is.EqualTo(true), "Erro ao validar o texto!");
 
-        }
+        //}
 
 
     }
