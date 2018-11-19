@@ -17,11 +17,15 @@ namespace SeleniumGridTest.UI.Tests.Base
         [OneTimeSetUp]
         public void SetUp()
         {
-            if (_driver == null)
-            {
-                _driver = new DriverFactory(_driver).Initialize(ConfigurationManager.AppSettings["DefaultBrowser"]);
-                _driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["BaseURL"]);
-            }
+
+            _driver = new DriverFactory(_driver).Initialize(ConfigurationManager.AppSettings["DefaultBrowser"]);
+            _driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["BaseURL"]);
+
+            //if (_driver == null)
+            //{
+            //    _driver = new DriverFactory(_driver).Initialize(ConfigurationManager.AppSettings["DefaultBrowser"]);
+            //    _driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["BaseURL"]);
+            //}
             //Reporter.CreateReport();
         }
 
@@ -64,19 +68,19 @@ namespace SeleniumGridTest.UI.Tests.Base
                 //    break;
                 default:
                     logstatus = Status.Pass;
-                    Reporter.LogPass(logstatus.ToString() + " Teste passou!");
+                    //Reporter.LogPass(logstatus.ToString() + " Teste passou!");
                     break;
             }
 
             // Reporter.Log(logstatus, "Test ended with " + logstatus + stacktrace);
 
-            Reporter.GenerateReport();
+           // Reporter.GenerateReport();
         }
 
         [OneTimeTearDown]
         public void TearDown()
         {
-            //_driver.Quit();
+            _driver.Quit();
             //_driver = null;
         }
     }

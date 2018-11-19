@@ -25,6 +25,11 @@ namespace SeleniumGridTest.Selenium.SeleniumPages
             objText = new TextBoxHelper(Instance);
         }
 
+        public object CreateNewBug(object categoria, object frequencia, object gravidade, object prioridade, bool v1, string v2, string v3, string v4, object atribuir, object resumo, object descricao, object passosReproduzir, object informacoesAdicionais, bool v5, bool v6)
+        {
+            throw new NotImplementedException();
+        }
+
         public const String url = "";
         public IWebElement linkCriarTarefa => Instance.FindElement(By.LinkText("Report Issue"));
 

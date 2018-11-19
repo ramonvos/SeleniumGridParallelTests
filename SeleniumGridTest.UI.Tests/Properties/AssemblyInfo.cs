@@ -14,8 +14,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: Parallelizable(ParallelScope.All)]
-[assembly: LevelOfParallelism(1)]
+[assembly: Parallelizable(ParallelScope.Self)]
+[assembly: LevelOfParallelism(3)]
 //[assembly: LevelOfParallelism(ConfigParallelTests.LevelOfParallelism)]
 
 [assembly: ComVisible(false)]

@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace SeleniumGridTest.UI.Tests.Tests
 {
-    [TestFixture, Order(1), Parallelizable(ParallelScope.All)]
+    [TestFixture, Order(4), Parallelizable(ParallelScope.All)]
     
     public class CreateNewBugTests : TestBase
     {

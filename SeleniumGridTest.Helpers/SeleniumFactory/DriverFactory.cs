@@ -34,34 +34,56 @@ namespace SeleniumGridTest.Helpers.SeleniumFactory
         {
             double timeout = Convert.ToDouble(ConfigurationManager.AppSettings["DefaultTimeout"]);
 
-            if (_driver == null)
+            if (browser.Equals("Chrome"))
             {
-                if (browser.Equals("Chrome"))
+                if (Convert.ToBoolean(ConfigurationManager.AppSettings["Remote"]))
                 {
-                    if (Convert.ToBoolean(ConfigurationManager.AppSettings["Remote"]))
-                    {
-                        _driver = Chrome.Build();
-                    }
-                    else
-                    {
-                        _driver = Chrome.BuildLocal();
-                    }
+                    _driver = Chrome.Build();
                 }
-
-                else if (browser.Equals("Firefox"))
-                {
-                    _driver = Firefox.Build();
-                }
-
                 else
                 {
-                    throw new Exception("Driver não suportado!");
+                    _driver = Chrome.BuildLocal();
                 }
             }
+
+            else if (browser.Equals("Firefox"))
+            {
+                _driver = Firefox.Build();
+            }
+
+            else
+            {
+                throw new Exception("Driver não suportado!");
+            }
+            //if (_driver == null)
+            //{
+            //    if (browser.Equals("Chrome"))
+            //    {
+            //        if (Convert.ToBoolean(ConfigurationManager.AppSettings["Remote"]))
+            //        {
+            //            _driver = Chrome.Build();
+            //        }
+            //        else
+            //        {
+            //            _driver = Chrome.BuildLocal();
+            //        }
+            //    }
+
+            //    else if (browser.Equals("Firefox"))
+            //    {
+            //        _driver = Firefox.Build();
+            //    }
+
+            //    else
+            //    {
+            //        throw new Exception("Driver não suportado!");
+            //    }
+            //}
 
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(timeout);
             _driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(timeout);
             _driver.Manage().Window.Maximize();
+            _driver.Manage().Cookies.DeleteAllCookies();
             return _driver;
         }
 
@@ -90,7 +112,7 @@ namespace SeleniumGridTest.Helpers.SeleniumFactory
             chromeOptions.AddUserProfilePreference("e.default_directory", AppDomain.CurrentDomain.BaseDirectory.Replace("bin\\Debug\\", "Downloads"));
             chromeOptions.AddUserProfilePreference("disable-popup-blocking", "true");
             chromeOptions.AddArguments("--start-maximized");
-            chromeOptions.AddArguments("--headless");
+            //chromeOptions.AddArguments("--headless");
             chromeOptions.AddArguments("--start-maximized");
             chromeOptions.AddArguments("lang=en-US");
 
